@@ -11,25 +11,17 @@
 			</div>
 				
 			<div class="list-group-item">
- 
-				<input type="checkbox" class="toggle">
-        <label>Learn Ember.js</label>
-				<button class='btn btn-default btn-xs pull-right'>
+	
+				{{#each todos as |todo|}}
+
+					<input type="checkbox" class="toggle">
+					<label>{{todo.title}}</label>
+					<button class='btn btn-default btn-xs pull-right'>
      			<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-				</button>
-				<br/>
-        <input type="checkbox" class="toggle">
-        <label>...</label>
-				<button class='btn btn-default btn-xs pull-right'>
-     			<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-				</button>				
-				<br/>
-        <input type="checkbox" class="toggle">
-        <label>Profit!</label>
-				<button class='btn btn-default btn-xs pull-right'>
-     			<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-				</button>
-				<br/>
+					</button>
+					<br/>
+				{{/each}}
+
 			</div>
 
       <footer class="footer">
