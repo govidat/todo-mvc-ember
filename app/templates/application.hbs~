@@ -1,1 +1,1 @@
-{{ outlet }}
+{{todos-route todos=model}}

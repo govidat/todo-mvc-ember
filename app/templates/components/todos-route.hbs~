@@ -14,17 +14,18 @@
 			</div>
 				
 			<div class="list-group-item">
-	      {{todos-list todos=todos class='todo-list'}}
+	      {{todos-list todos=queriedTodos class='todo-list'}}
 			</div>
 
       <footer class="footer">
         <span>
-          <strong>2</strong> todos left
+		      <strong>{{active.length}}</strong> {{inflection}} left
         </span>
 
 				<div class="btn-group" role="group">
+		    {{ link-to 'Active' 'index' (query-params filter='active') activeClass='selected' }}
           <a href="all" class="selected">All</a>
-          <a href="active">Active</a>
+
           <a href="completed">Completed</a>
 				</div>
 	      <span class="btn btn-default pull-right">
