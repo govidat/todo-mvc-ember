@@ -1,0 +1,7 @@
+
+	{{input type='checkbox' checked=todo.isCompleted class='toggle'}}
+	<label>{{todo.title}}</label>
+	<button class='btn btn-default btn-xs pull-right'>
+	<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+	</button>
+	<br/>

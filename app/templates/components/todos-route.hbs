@@ -6,27 +6,20 @@
 		<section class="well">
 			<div class="input-group ">
 			  <span class='input-group-addon'>
-					<input type="text" id="new-todo" placeholder="What needs to be done?" />
+					{{input type='text'
+            placeholder='What needs to be done?'
+            value=newTitle
+            enter='createTodo'}}
 			  </span>
 			</div>
 				
 			<div class="list-group-item">
-	
-				{{#each todos as |todo|}}
-
-					<input type="checkbox" class="toggle">
-					<label>{{todo.title}}</label>
-					<button class='btn btn-default btn-xs pull-right'>
-     			<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-					</button>
-					<br/>
-				{{/each}}
-
+	      {{todos-list todos=todos class='todo-list'}}
 			</div>
 
       <footer class="footer">
         <span>
-          <strong>2</strong> todos left
+		      <strong>{{active.length}}</strong> {{inflection}} left
         </span>
 
 				<div class="btn-group" role="group">
