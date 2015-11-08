@@ -6,6 +6,8 @@
 		<section class="well">
 			<div class="input-group ">
 			  <span class='input-group-addon'>
+					{{input type='checkbox' checked=areAllCompleted aria-label="..." change=(action 'toggleAll') }}
+
 					{{input type='text'
             placeholder='What needs to be done?'
             value=newTitle
@@ -26,11 +28,17 @@
 		    {{ link-to 'All'       'index' (query-params filter='all')       activeClass='selected' }}
 		    {{ link-to 'Active'    'index' (query-params filter='active')    activeClass='selected' }}
 		    {{ link-to 'Completed' 'index' (query-params filter='completed') activeClass='selected' }}
- 
+
 				</div>
-	      <span class="btn btn-default pull-right">
-					Clear completed (1)
-	      </span>
+
+				<span class="btn btn-default pull-right">
+         {{#if completed}}
+           <button {{action "clearCompleted"}}>
+           Clear completed ({{completed.length}})
+           </button>
+         {{/if}}
+		   </span>
+
       </footer>
 		</section>
 

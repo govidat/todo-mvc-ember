@@ -38,6 +38,11 @@ export default Ember.Component.extend({
     return al === 1 ? 'item' : 'items';
   }).readOnly(),
 
+  areAllCompleted: computed('active.[]', 'active', 'todos', function(){
+	 console.log(this.get('active.length'));
+	 return this.get('active.length') === 0 
+  }),
+
   actions: {
     createTodo() {
       const store = this.get('store');
@@ -61,6 +66,17 @@ export default Ember.Component.extend({
       // Save the new model
       todo.save();
     },
+		
+		clearCompleted() {
+         this.get('completed').invoke('deleteRecord')
+		},
+
+		toggleAll() {
+	   var checkState = this.get('areAllCompleted')
+
+	   this.get('todos').setEach('isCompleted', checkState)
+	   this.get('todos').invoke('save')
+		}
 
   },
 

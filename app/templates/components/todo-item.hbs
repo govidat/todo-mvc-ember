@@ -5,7 +5,12 @@
                            insert-newline='save'}}
 {{else}}
   {{input type='checkbox' checked=todo.isCompleted class='toggle' change=(action 'save') }}
-  <label {{action 'editTodo' on='doubleClick'}}>{{todo.title}}</label>
+	{{#if todo.isCompleted}}
+	  	<label {{action 'editTodo' on='doubleClick'}}><del><small><em>{{todo.title}}</em></small></del></label>
+	{{else}}
+	  <label {{action 'editTodo' on='doubleClick'}}>{{todo.title}}</label>
+	{{/if}}
+
 	<button  {{action 'removeTodo'}} class='btn btn-default btn-xs pull-right'>
 	<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
 	</button>

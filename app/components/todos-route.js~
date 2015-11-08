@@ -10,6 +10,28 @@ export default Ember.Component.extend({
 
   store: service(),
 	active: computed.filterBy('todos', 'isCompleted', false),
+  completed: computed.filterBy('todos', 'isCompleted', true),
+
+  queriedTodos: computed('todos', 'filter', function() {
+    //use anything and return 
+    var tlist = this.get('todos');
+    var f = this.get('filter');
+
+    if(f === 'all'){
+    	return tlist
+    }
+    else if(f === 'completed'){
+        return this.get('completed')
+    }
+    else if(f === 'active'){
+        return this.get('active')
+    }
+    else{
+    	// inform the user probably
+        return tlist	
+    }
+  }),
+
 
   inflection: computed('active.[]', function() {
     var al = this.get('active.length');
@@ -39,7 +61,10 @@ export default Ember.Component.extend({
       // Save the new model
       todo.save();
     },
-
+		
+     clearCompleted() {
+         this.get('completed').invoke('deleteRecord')
+     },
   },
 
 });
