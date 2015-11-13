@@ -8,7 +8,6 @@ module.exports = function(defaults) {
         includePaths: [
           'bower_components/bootstrap-sass/assets/stylesheets'
 // ,           'bower_components/bootstrap-sass/assets/fonts'
-
         ]
       }
   });
@@ -23,7 +22,7 @@ module.exports = function(defaults) {
 	app.import('bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.svg' , {destDir: '/fonts/bootstrap'});
 	app.import('bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff' , {destDir: '/fonts/bootstrap'});
 	app.import('bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2' , {destDir: '/fonts/bootstrap'});
-*/
+*
   //
   // If you need to use different assets in different
   // environments, specify an object as the first parameter. That
