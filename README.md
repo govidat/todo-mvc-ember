@@ -1,6 +1,6 @@
 # TODO MVC in ember.js ver 2.1.0 with Bootstrap
 
-Ember js earlier had an easy to understand todo mvc guide. I have tried to reproduce the same with the ember.js version 2.1.0. Many changes have happened in ember and the todo mvc guide also has various versions. This is my attempt to be upadted.
+Ember.js earlier had an easy to understand todo mvc guide. I have tried to reproduce the same with the ember.js version 2.1.0. Many changes have happened in ember and the todo mvc guide also has various versions. This is my attempt to be upadted.
 
 In this version, ember components have taken the cenrte stage (instead of Views and Controller).
 
