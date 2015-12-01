@@ -4,7 +4,7 @@ Ember.js earlier had an easy to understand todo mvc guide. I have tried to repro
 
 In this version, ember components have taken the cenrte stage (instead of Views and Controller).
 
-A more detailed note is added in the web link: http://govidat.github.io/emberjs_210.html
+A more detailed note is added in the web link: http://govidat.github.io/blog/tutorial/2015/11/30/emberjs-2.1.0-todomvc.html
 
 
 ## Prerequisites
