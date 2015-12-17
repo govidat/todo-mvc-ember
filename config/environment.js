@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'a210-todo',
+    modulePrefix: 'todo',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

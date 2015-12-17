@@ -1,7 +1,7 @@
 {
-  "name": "a210-todo",
+  "name": "todo",
   "version": "0.0.0",
-  "description": "Small description for a210-todo goes here",
+  "description": "Small description for todo goes here",
   "private": true,
   "directories": {
     "doc": "doc",
